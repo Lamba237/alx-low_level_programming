@@ -1,10 +1,13 @@
-#include<stdio.h>
+#include <stdio.h>
+
 /**
- *main - The program prints a character followed
- *return : Returning 0 to close the program
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	puts("/"Programming is like building a multilingual puzzle");
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
