@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * print_sign - Entry point 
- *
- * @n: it is a number 
- *
- * Return: 1 and prints  +. returns 0 and prints 0. returns -1 and prints -.
- */
+* print_sign - Entry point 
+*
+* @n: it is an interger number 
+*
+* Return: 1 and prints  +. returns 0 and prints 0. returns -1 and prints -.
+*/
 int print_sign(int n)
 {
 	if (n > 0)
