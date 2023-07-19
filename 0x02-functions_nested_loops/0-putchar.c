@@ -1,11 +1,9 @@
 #include "main.h"
 
 /**
-* main - Entry point
+* main - Print the word "_putchar"
 *
-* Description: 'prints out the word _putchar'
-*
-*return: always 0
+* Return: Always 0 (Success)
 */
 
 int main(void)
