@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
-* main - prints the word "_putchar"
+* main - Entry point
+*
+* Description: 'prints out the word _putchar'
 *
 *return: always 0
 */
