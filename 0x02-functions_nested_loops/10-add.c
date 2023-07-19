@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * add - adds two integers and 
- * returns the result.
- *
- * @a: for interger first interger value
- * @b: for second interger value
- *
- * Return: returns the result
- */
+* add - a function that adds two integers
+* and returns the result.
+*
+* @a: number one.
+* @b: number two.
+*
+* Return: Add of number one and number two.
+*/
 
 int add(int a, int b)
 {
