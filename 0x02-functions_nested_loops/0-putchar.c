@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* main - Entry point of my code
+* main - prints the word "_putchar"
 *
 *return: always 0
 */
