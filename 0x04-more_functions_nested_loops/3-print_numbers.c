@@ -1,7 +1,7 @@
 #include "main.h"
+
 /**
- * print_numbers - prints the numbers, 
- * Return: o
+ * print_numbers - prints the numbers
  */
 
 void print_numbers(void)
