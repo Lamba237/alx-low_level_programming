@@ -6,6 +6,6 @@
  */
 void _puts(char *str)
 {
-	str = " I do not fear computers. I fear the lack of them \n";
-	_putchar(str)'
+	*str = " I do not fear computers. I fear the lack of them \n";
+	_putchar(str);
 }
