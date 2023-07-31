@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _strspn - length of string.
- * @s: char pointer.
- * @accept: string value.
+ * _strspn - gets the length of a prefix substring
+ * @s: string
+ * @accept: contains bytes that may or may not compose parts of the string
  *
- * Return: number of bytes in initial segment.
+ * Return: the number of bytes that compose the length
  */
 unsigned int _strspn(char *s, char *accept)
 {
@@ -16,12 +16,11 @@ unsigned int _strspn(char *s, char *accept)
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; accept[j] != '\0' && accept[j] != s[i]; j++)
-		{
-			if (s[i] == accept[j])
-				length++;
-			if(accept[j] == '\0')
-				return (length);
-		}
+			;
+		if (s[i] == accept[j])
+			length++;
+		if (accept[j] == '\0')
+			return (length);
 	}
 	return (length);
 }
