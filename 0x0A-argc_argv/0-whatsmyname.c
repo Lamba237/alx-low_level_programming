@@ -1,13 +1,13 @@
 #include <stdio.h>
-
 /**
- *@argc: integer.
- *@argv: pointer array.
- *Return: returns array of pointers
-**/
-int main (int argc, char *argv[])
+ * main -  writes its name
+ * @argc: arguement count
+ * @argv: array of pointers to arguement strings
+ * Return: 0
+ **/
+int main(int argc, char *argv[])
 {
-	argv = argv;
-  printf("%d\n", argc - 1);
-  return (0);
+	argc = argc;
+	printf("%s\n", *argv);
+	return (0);
 }
