@@ -5,14 +5,11 @@
  *@argc: interger count.
 Return: 0 or 1
 */
-int main (int argc, char argv[])
+int main (int argc, char *argv[])
 {
-	int count;
-
-	argc = argc;
-	for (count = 0; count <= argv; count++)
+	while (argc--)
 	{
-		printf("%s\n",argv[count]);
+		printf("%s\n", *argv);
 	}
 	return (0);
 }
