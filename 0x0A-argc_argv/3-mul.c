@@ -18,11 +18,12 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	else
+	while (b = '\0')
 	{
-	sum = a * b;
-	printf("%d\n", sum);
+		printf("Error\n");
+		return (1);
 	}
-
+	sum = b * a;
+	printf("%d\n", sum);
 	return (0);
 }
