@@ -1,14 +1,14 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- *str_concat - concantenates two strings.
- *@s1: input string.
- *@s2: input string.
- *Return: pointer to new space in memory.
-*/
+ * *str_concat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: pointer to new space in memory or null
+ **/
 char *str_concat(char *s1, char *s2)
 {
-	char *str;
+	char *strDup;
 	int i, j;
 
 	if (s1 == NULL)
@@ -20,20 +20,20 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	while (s2[j] != '\0')
 		j++;
-	str = malloc(sizeof(char) * (i + j + 1));
-	if (str == NULL)
+	strDup = malloc(sizeof(char) * (i + j + 1));
+	if (strDup == NULL)
 		return (NULL);
 	i = j = 0;
 	while (s1[i] != '\0')
 	{
-		str[i] = s1[i];
+		strDup[i] = s1[i];
 		i++;
 	}
 	while (s2[j] != '\0')
 	{
-		str[j] = s2[j];
-		j++;
+		strDup[i] = s2[j];
+		i++, j++;
 	}
-	str[i] = '\0';
-	return (str);
+	strDup[i] = '\0';
+	return (strDup);
 }
