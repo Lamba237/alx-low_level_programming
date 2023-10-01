@@ -1,19 +1,16 @@
 #include "main.h"
 
 /**
- * _puts_recursion - prints a string to std output
- * @s: string to be printed
+ *_puts_recursion - function to print a string.
+ *@s: string to be printed.
  *
- * Return: returns a string s to std output
+ *Return: return a string else 0.
  */
-
 void _puts_recursion(char *s)
 {
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		_putchar(s[i]);
+	if (*s == '\0')
+	{	
+		_putchar ('\n');
 	}
-	_putchar('\n');
+	_putchar(*s);
 }
