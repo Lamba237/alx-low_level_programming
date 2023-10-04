@@ -9,8 +9,11 @@
  */
 int main(int argc, char *argv[])
 {
-	*argv = '\0';
-
+	argv = argv;
+	if (argc > 0)
+	{
+		argc -= 1;
 	printf("%d\n", argc);
+	}
 	return (0);
 }
