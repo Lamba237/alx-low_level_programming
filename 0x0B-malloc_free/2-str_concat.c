@@ -1,25 +1,22 @@
-#include <stdlib.h>
 #include "main.h"
+#include <stdlib.h>
 /**
- *str_concat - concatenates two strings
- *@s1: first string
- *@s2: second string
- *
- * Return: returns null else concatenated string
- *
+ * str_concat - get ends of input and add together for size
+ * @s1: input one to concat
+ * @s2: input two to concat
+ * Return: concat of s1 and s2
  */
 char *str_concat(char *s1, char *s2)
 {
 	char *concat;
-	int i;
-	int r;
+	int i, r;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	i = 0;
-	r = 0;
+
+	i = r = 0;
 	while (s1[i] != '\0')
 		i++;
 	while (s2[r] != '\0')
@@ -28,18 +25,19 @@ char *str_concat(char *s1, char *s2)
 
 	if (concat == NULL)
 		return (NULL);
-
+	i = r = 0;
 	while (s1[i] != '\0')
 	{
 		concat[i] = s1[i];
 		i++;
 	}
+
 	while (s2[r] != '\0')
 	{
 		concat[i] = s2[r];
-		i++;
-		r++;
+		i++, r++;
 	}
 	concat[i] = '\0';
 	return (concat);
 }
+
