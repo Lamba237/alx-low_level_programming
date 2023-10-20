@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
-#include <strings.h>
+#include <string.h>
 /**
  *struct list_s - singly inked list
  *@str: malloc'ed string
@@ -15,7 +15,7 @@ typedef struct list_s
 {
 	char *str;
 	unsigned int len;
-	struct list_S *next;
+	struct list_s *next;
 } list_t;
 
 int _putchar(char c);
