@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- *addd_node - adds a new node at beginning of list
+ *add_node - adds a new node at beginning of list
  *@head: head pointer
  *@str: string node
  *Return: Newnode else NULL
