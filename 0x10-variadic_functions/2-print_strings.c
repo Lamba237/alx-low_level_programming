@@ -12,7 +12,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list ptr;
 
 	va_start(ptr, n);
-	str = separator;
+
 	for (i = 0; i < n; i++)
 	{
 		str = va_arg(ptr, const char *);
@@ -26,7 +26,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 		printf("%s", separator);
 	}
-	va_end(ptr);
 	printf("\n");
+	va_end(ptr);
 }
 
