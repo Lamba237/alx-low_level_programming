@@ -7,7 +7,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	int binary[32];
+	int binary;
 	int c = 0;
 	int d;
 
@@ -17,12 +17,13 @@ void print_binary(unsigned long int n)
 	}
 	while (n > 0)
 	{
-		binary[c++] = n & 1;
+		binary = n & 1;
 		n >>= 1;
+		c++;
 	}
 	for (d = c - 1; d >= 0; d--)
 	{
-		_putchar(binary[d]);
+		_putchar(binary);
 	}
 	_putchar('\n');
 }
