@@ -23,7 +23,7 @@ void print_binary(unsigned long int n)
 	}
 	for (d = c - 1; d >= 0; d--)
 	{
-		_putchar(binary);
+		_putchar('0' + ((binary >> d) & 1));
 	}
 	_putchar('\n');
 }
