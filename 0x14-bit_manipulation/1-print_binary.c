@@ -7,22 +7,21 @@
  */
 void print_binary(unsigned long int n)
 {
-	int binary;
+	int binary = 0;
 	int c = 0;
-	int d;
 
-	if (n == 0)
+	if ( n == 0)
 	{
 		_putchar('0');
 	}
-	while (n > 0)
+	while (n != 0)
 	{
-		binary = n & 1;
+		binary |= (n & 1) << c;
 		n >>= 1;
 		c++;
 	}
-	for (d = c - 1; d >= 0; d--)
+	while (c > 0)
 	{
-		_putchar('0' + ((binary >> d) & 1));
+		_putchar('0' + ((binary >> --c) & 1));
 	}
 }
