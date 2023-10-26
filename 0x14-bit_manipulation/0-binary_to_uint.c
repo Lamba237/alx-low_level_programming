@@ -22,7 +22,7 @@ unsigned int binary_to_uint(const char *b)
 		{
 			return (0);
 		}
-		interger += (b[n] - '0') * _pow_recursion(2, strlen((b) - n - 1));
+		interger += (b[n] - '0') * _pow_recursion(2, strlen(b) - n - 1);
 	}
 	}
 	return (interger);
