@@ -10,14 +10,20 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int interger = 0;
 	int n;
 
-	if (b == NULL || (b[interger] != '0' && b[interger] != '1'))
+	if (b == NULL)
 	{
-			return (0);
+		return (0);
 	}
-
+	else
+	{
 	for (n = strlen(b) - 1; n >= 0; n--)
 	{
-		interger += (b[n] - '0') * _pow_recursion(2, strlen(b) - n - 1);
+		if (b[n] != '0' && b[n] != '1')
+		{
+			return (0);
+		}
+		interger += (b[n] - '0') * _pow_recursion(2, strlen((b) - n - 1));
+	}
 	}
 	return (interger);
 }
