@@ -7,37 +7,32 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	mode_t mode = S_IRUSR | S_IWUSR;
-	FILE *fd;
+	/*mode_t mode = S_IRUSR | S_IWUSR;*/
+	int fd;
 	ssize_t n_write;
-	char *buffer;
 	/* declaration and opening of file */
-	buffer = text_content;
 	if (filename == NULL)
 	{
 		return (-1);
 	}
-	fd = fopen(filename, "w");
+	fd = open(filename, 0_WRONLY|0_CREAT, S_IRUSR | S_IWUSR);
 	if (text_content == NULL)
 	{
-		fclose(fd);
 		return (1);
 	}
-	if (fd == NULL)
+	if (fd < 0)
 		return (-1);
 	/* writing into the file using */
-	n_write = write(STDOUT_FILENO, buffer, sizeof(buffer));
-	if (n_write <= 0)
+	n_write = write(STDOUT_FILENO, text_content, strlen(text_content));
+	if (n_write < 0)
 	{
-		fclose(fd);
+		close(fd);
 		return (-1);
 	}
-	chmod(filename, mode);
 	if (access(filename, F_OK) == 0)
 	{
-		fclose(fd);
-		return (1);
+		fd = open(filename, 0_WRONLY | 0_TRUNC);
 	}
-	fclose(fd);
+	close(fd);
 	return (1);
 }
