@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdlib.h>
+#include <sys/stat.h>
+#include <unistd.h>
 /**
  * create_file - creates a file
  * @filename: file to be created
@@ -15,23 +18,23 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-	fd = open(filename, 0_WRONLY|0_CREAT, S_IRUSR | S_IWUSR);
+	fd = open(filename, O_CREAT | O_WRONLY, 0600);
 	if (text_content == NULL)
 	{
-		return (1);
+		return (-1);
 	}
-	if (fd < 0)
+	if (fd == -1)
 		return (-1);
 	/* writing into the file using */
-	n_write = write(STDOUT_FILENO, text_content, strlen(text_content));
-	if (n_write < 0)
+	n_write = write(fd, text_content, strlen(text_content));
+	if (n_write == -1)
 	{
 		close(fd);
 		return (-1);
 	}
 	if (access(filename, F_OK) == 0)
 	{
-		fd = open(filename, 0_WRONLY | 0_TRUNC);
+		fd = open(filename, O_WRONLY | O_TRUNC);
 	}
 	close(fd);
 	return (1);
