@@ -10,6 +10,8 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned int buffer;
 	unsigned  int holder;
 
+	if (n == '\0')
+		return (-1);
 	holder = 1 << index;
 	buffer = (n & holder);
 	return ((buffer) != 0);
