@@ -6,7 +6,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned holder = 0;
+	unsigned int holder = 0;
 
 	/*unsigned long int divider = 1;*/
 
