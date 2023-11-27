@@ -8,7 +8,6 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	ssize_t bytesRead;
 	ssize_t bytesWritten;
 	int fd;
 
@@ -18,13 +17,16 @@ int create_file(const char *filename, char *text_content)
 	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 	if (fd == -1)
 		return (-1);
-	bytesRead = read(fd, text_content, sizeof(text_content));
-	if (bytesRead == -1)
-		return (-1);
-	bytesWritten = write(STDIN_FILENO, text_content, bytesRead);
+	if (text_content != NULL)
+	{
+		/* write the text_content into the file */
+	bytesWritten = write(fd, text_content, strlen(text_content));
 	if (bytesWritten == -1)
+	{
+		close(fd);
 		return (-1);
-	free(text_content);
+	}
+	}
 	close(fd);
 	return (1);
 }
