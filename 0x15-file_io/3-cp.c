@@ -1,5 +1,17 @@
 #include "main.h"
 /**
+ * print_error - prints error message
+ * @message: message to be printed
+ * @filename: name of file
+ * @error_code: error code
+ * Return: nothing
+ */
+void print_error(char *message, char *filename, int error_code)
+{
+	dprintf(STDERR_FILENO, "%s %s\n", message, filename);
+	exit(error_code);
+}
+/**
  * main - main function
  * @ac: argument count
  * @av: argument vector
