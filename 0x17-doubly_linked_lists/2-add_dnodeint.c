@@ -5,7 +5,7 @@
  * add_dnodeint - adds a new node at the beginning
  * of a linked list
  * @head: head pointer
- * n: data to be added
+ * @n: data to be added
  * Return: address of new element or NULL if it failed
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
