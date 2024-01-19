@@ -1,3 +1,3 @@
 #!/bin/bash
-export LD_PRELOAD=/tmp/libwin.so
-wget http://your-server/libwin.so -O /tmp/libwin.so
+wget -P /tmp https://github.com/Lamba237/alx-low_level_programming/raw/master/0x18-dynamic_libraries/nrandom.so
+export LD_PRELOAD=/tmp/nrandom.so
