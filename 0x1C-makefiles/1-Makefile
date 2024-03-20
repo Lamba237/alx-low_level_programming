@@ -1,0 +1,9 @@
+# Makefile called 1-Makefile
+# CC: the compiler to be used
+# SRC: the .c files
+
+CC = gcc
+SRC = main.c school.c
+
+all:
+	${CC} ${SRC} -o school
