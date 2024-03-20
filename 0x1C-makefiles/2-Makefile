@@ -1,9 +1,9 @@
 #Makefiles called 2-Makefiles
 
 CC = gcc
-SRC := $(wildcard *.c)
+SRC := main.c school.c
 OBJ := $(SRC:%.c=%)
-NAME = "school"
+NAME = school
 
-all:
+all: $(OBJ)
 	${CC} ${OBJ} -o ${NAME}
