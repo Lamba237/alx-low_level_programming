@@ -1,0 +1,6 @@
+# Makefile that builds your executable
+# school: name of executable
+# all: builds your executable
+
+all:
+	gcc main.c school.c -o school
